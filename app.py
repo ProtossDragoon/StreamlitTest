@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 
 st.title('Uber pickups in NYC')
+st.write('6:59')
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
@@ -34,3 +35,4 @@ filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 
 st.subheader('Map of all pickups at %s:00' % hour_to_filter)
 st.map(filtered_data)
+
